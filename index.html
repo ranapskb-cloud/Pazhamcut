@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PazhamCut™</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HOME SCREEN -->
+
+    <main class="home">
+
+        <!-- Decorative elements -->
+        <div class="spark spark-1">✦</div>
+        <div class="spark spark-2">✧</div>
+        <div class="spark spark-3">✦</div>
+
+        <!-- Banana mascot -->
+        <div class="banana-mascot">
+            🍌
+        </div>
+
+        <!-- Online status -->
+        <div class="system-status">
+            <span></span>
+            SYSTEM ONLINE
+        </div>
+
+        <!-- Main title -->
+        <h1>
+            PAZHAM<span>CUT</span><sup>™</sup>
+        </h1>
+
+        <h2>
+            Advanced Banana Optimization System
+        </h2>
+
+        <!-- Introduction -->
+        <div class="intro">
+
+            <p>Not just a fruit...</p>
+
+            <strong>
+                It's a mathematical problem.
+            </strong>
+
+        </div>
+
+        <!-- Mini game note -->
+        <div class="game-note">
+
+            <div>🍌 <b>9 Steps</b></div>
+            <div>🧠 Infinite Logic</div>
+            <div>😂 Questionable Science</div>
+
+        </div>
+
+        <!-- Start game -->
+        <button class="start-button" onclick="startGame()">
+
+            <span>🍌</span>
+            START THE PAZHAM EXPERIMENT
+            <span>→</span>
+
+        </button>
+
+        <!-- Warning -->
+        <div class="warning">
+
+            <span>⚠️</span>
+
+            Human intervention may be required.
+
+        </div>
+
+        <!-- Bottom tagline -->
+        <p class="tagline">
+            A completely unnecessary approach to banana distribution.
+        </p>
+
+    </main>
+<!-- ========================================
+     LEVEL 01 — BANANA LAB
+======================================== -->
+
+<section class="banana-lab" id="bananaLab">
+
+    <div class="section-heading">
+
+        <div class="step-number">
+            1
+        </div>
+
+        <div>
+            <p class="section-label">
+                LEVEL 01
+            </p>
+
+            <h2>
+                🍌 Banana Lab
+            </h2>
+
+            <p>
+                Every great scientific disaster starts with some measurements.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="lab-card">
+
+        <!-- Banana -->
+
+        <div class="banana-visual">
+
+            <div class="banana-big">
+                🍌
+            </div>
+
+            <p>
+                Subject under investigation
+            </p>
+
+        </div>
+
+
+        <!-- Game controls -->
+
+        <div class="lab-inputs">
+
+            <!-- Banana length -->
+
+            <div class="input-box">
+
+                <div class="input-title">
+                    📏 Banana Length
+                </div>
+
+                <div class="input-row">
+
+                    <input
+                        type="number"
+                        id="bananaLength"
+                        value="20"
+                        min="1">
+
+                    <span>cm</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- People -->
+
+            <div class="input-box">
+
+                <div class="input-title">
+                    👥 Number of People
+                </div>
+
+                <div class="input-row">
+
+                    <input
+                        type="number"
+                        id="people"
+                        value="6"
+                        min="1">
+
+                    <span>people</span>
+
+                </div>
+
+            </div>
+<div id="nameInputs"></div>
+
+            <!-- Piece size -->
+
+            <div class="input-box">
+
+                <div class="input-title">
+                    📐 Desired Piece Size
+                </div>
+
+                <div class="input-row">
+
+                    <input
+                        type="number"
+                        id="pieceSize"
+                        value="3"
+                        min="1">
+
+                    <span>cm</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hunger -->
+
+            <div class="input-box hunger-box">
+
+                <div class="input-title">
+
+                    🍽️ Hunger Level
+
+                    <strong id="hungerValue">
+                        85%
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="hunger"
+                    min="0"
+                    max="100"
+                    value="85">
+
+            </div>
+
+
+            <!-- Start level -->
+
+            <button
+                class="optimize-button"
+                onclick="optimizeBanana()">
+
+                🍌 OPTIMIZE MY PAZHAM
+                <span>→</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="lab-joke">
+
+        🧠 Because simply cutting a banana was apparently too easy.
+
+    </div>
+
+</section>
+<!-- ========================================
+     LEVEL 02 — OPTIMIZATION
+======================================== -->
+
+<section class="optimization-screen" id="optimizationScreen">
+
+    <div class="optimization-card">
+
+        <div class="gear-icon">
+            ⚙️
+        </div>
+
+        <div class="level-label">
+            LEVEL 02 / 09
+        </div>
+
+        <h2>
+            Banana Optimization
+        </h2>
+
+        <p class="optimization-subtitle">
+            Preparing the world's most unnecessarily advanced banana calculation...
+        </p>
+<!-- 🍌 PAZHAMCUT™ CUTTING CHAMBER -->
+
+<div class="cutting-chamber">
+
+    <div class="cutting-brand">
+        <span>🍌</span>
+        <strong>PAZHAMCUT™</strong>
+        <span>PRECISION CUTTING LAB</span>
+    </div>
+
+    <div class="cutting-status">
+        <span id="cutCounter">READY</span>
+        <span id="cutMessage">Preparing banana...</span>
+    </div>
+
+    <div class="banana-stage">
+
+    <div class="banana-machine">
+
+        <div class="banana-whole" id="bananaWhole">
+            🍌
+        </div>
+
+        <div class="banana-cut-body" id="bananaCutBody">
+        </div>
+
+    </div>
+
+    <div class="knife" id="cuttingKnife">
+        🔪
+    </div>
+
+</div>
+
+    <div class="cutting-equation">
+        <span id="cutPieceCount">0</span>
+        <span> PIECES CUT</span>
+    </div>
+
+</div>
+
+        <!-- Progress -->
+
+        <div class="progress-area">
+
+            <div class="progress-top">
+                <span id="progressText">
+                    Initializing...
+                </span>
+
+                <strong id="progressPercent">
+                    0%
+                </strong>
+            </div>
+
+            <div class="progress-track">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Calculation steps -->
+
+        <div class="calculation-steps">
+
+            <div class="calculation-step" id="step1">
+                <span>🔍</span>
+                <p>Scanning banana dimensions...</p>
+                <b>WAITING</b>
+            </div>
+
+            <div class="calculation-step" id="step2">
+                <span>📐</span>
+                <p>Calculating possible cuts...</p>
+                <b>WAITING</b>
+            </div>
+
+            <div class="calculation-step" id="step3">
+                <span>⚖️</span>
+                <p>Checking distribution fairness...</p>
+                <b>WAITING</b>
+            </div>
+
+            <div class="calculation-step" id="step4">
+                <span>🧠</span>
+                <p>Running Banana Intelligence...</p>
+                <b>WAITING</b>
+            </div>
+
+        </div>
+
+
+        <!-- Funny message -->
+
+        <div class="system-message" id="systemMessage">
+            🍌 The banana is cooperating.
+        </div>
+
+    </div>
+
+</section>
+<!-- ========================================
+     LEVEL 03 — RESULT DASHBOARD
+======================================== -->
+
+<section class="result-dashboard" id="resultDashboard">
+
+    <div class="dashboard-heading">
+
+        <div class="step-number dashboard-number">
+            3
+        </div>
+
+        <div>
+            <p class="section-label">
+                LEVEL 03 / 09
+            </p>
+
+            <h2>
+                📊 Result Dashboard
+            </h2>
+
+            <p>
+                The banana has been calculated. The consequences are now visible.
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Main result -->
+
+    <div class="result-main-card">
+
+        <div class="result-icon">
+            🍌
+        </div>
+
+        <div class="result-main-text">
+
+            <span>
+                OPTIMIZED CUTTING PLAN
+            </span>
+
+            <h3 id="mainResult">
+                Calculating...
+            </h3>
+
+            <p id="resultExplanation">
+                The Banana Intelligence Department is reviewing your case.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Result cards -->
+
+    <div class="result-grid">
+
+        <div class="result-card yellow-result">
+
+            <div class="result-card-icon">
+                ✂️
+            </div>
+
+            <div>
+                <span>RECOMMENDED PIECES</span>
+                <strong id="recommendedPieces">
+                    --
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="result-card purple-result">
+
+            <div class="result-card-icon">
+                📏
+            </div>
+
+            <div>
+                <span>PIECE SIZE</span>
+                <strong id="calculatedPieceSize">
+                    -- cm
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="result-card green-result">
+
+            <div class="result-card-icon">
+                👥
+            </div>
+
+            <div>
+                <span>PEOPLE SERVED</span>
+                <strong id="peopleServed">
+                    --
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="result-card pink-result">
+
+            <div class="result-card-icon">
+                🍽️
+            </div>
+
+            <div>
+                <span>HUNGER LEVEL</span>
+                <strong id="resultHunger">
+                    --%
+                </strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Banana calculation -->
+
+    <div class="math-report">
+
+        <div class="math-report-title">
+            🧠 Banana Mathematics
+        </div>
+
+        <div class="math-equation" id="mathEquation">
+            Banana length ÷ piece size = ???
+        </div>
+
+        <p id="remainderText">
+            Checking for suspicious leftover banana...
+        </p>
+
+    </div>
+
+
+    <!-- Continue -->
+
+    <button
+        class="dashboard-button"
+        id="justiceButton"
+        onclick="startJustice()">
+
+        ⚖️ CONTINUE TO BANANA JUSTICE
+        <span>→</span>
+
+    </button>
+
+
+    <div class="dashboard-joke">
+
+        📊 Finally, numbers have found a banana-related purpose.
+
+    </div>
+
+</section>
+<!-- ========================================
+     LEVEL 04 — BANANA JUSTICE
+======================================== -->
+
+<section class="banana-justice" id="bananaJustice">
+
+    <div class="justice-heading">
+
+        <div class="step-number justice-number">
+            4
+        </div>
+
+        <div>
+            <p class="section-label">
+                LEVEL 04 / 09
+            </p>
+
+            <h2>
+                ⚖️ Banana Justice
+            </h2>
+
+            <p>
+                Before deciding who deserves more,
+                we need to investigate everyone's hunger.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="justice-card">
+
+        <div class="justice-header">
+
+            <span>
+                ⚖️ CASE #BANANA-004
+            </span>
+
+            <strong>
+                HUNGER INVESTIGATION
+            </strong>
+
+        </div>
+
+
+        <div class="justice-question">
+
+            <div class="justice-banana">
+                🍌
+            </div>
+
+            <h3>
+                Who deserves the bigger piece?
+            </h3>
+
+            <p>
+                First, let's find out who is actually hungry.
+            </p>
+
+        </div>
+
+
+        <!-- Hunger scan -->
+
+        <div class="hunger-investigation">
+
+            <div class="investigation-title">
+                🍽️ HUNGER SCAN
+            </div>
+
+            <p class="investigation-subtitle">
+                The Banana Justice Department has scanned everyone.
+            </p>
+
+
+            <div
+                class="people-hunger"
+                id="peopleHunger">
+
+                <!-- People will appear here automatically -->
+
+            </div>
+
+        </div>
+
+
+        <!-- Justice decision -->
+
+        <div
+            class="justice-decision"
+            id="justiceDecisionBox">
+
+            <div class="decision-title">
+                🚨 JUSTICE DECISION REQUIRED
+            </div>
+
+            <p id="justiceQuestion">
+                Reviewing the hunger evidence...
+            </p>
+
+
+            <div class="justice-options">
+
+                <button
+                    class="justice-option"
+                    onclick="chooseJustice('equal')">
+
+                    <span>⚖️</span>
+
+                    <div>
+                        <strong>Everyone gets equal pieces</strong>
+                        <small>Classic mathematical democracy.</small>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="justice-option"
+                    onclick="chooseJustice('hunger')">
+
+                    <span>🍽️</span>
+
+                    <div>
+                        <strong>Hungriest person gets more</strong>
+                        <small>Hunger has entered the legal system.</small>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="justice-option"
+                    onclick="chooseJustice('random')">
+
+                    <span>🎲</span>
+
+                    <div>
+                        <strong>Let the banana decide</strong>
+                        <small>Absolutely no scientific justification.</small>
+                    </div>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Decision result -->
+
+        <div
+            class="justice-result"
+            id="justiceResult">
+
+            <div class="justice-result-icon">
+                ⚖️
+            </div>
+
+            <div>
+
+                <span>COURT DECISION</span>
+
+                <strong id="justiceVerdict">
+                    Awaiting decision...
+                </strong>
+
+                <p id="justiceExplanation">
+                    The Banana Court is waiting for your answer.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="justice-continue"
+            id="crisisButton"
+            onclick="goToCrisis()"
+            disabled>
+
+            🚨 CONTINUE TO BANANA CRISIS
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+
+    <div class="justice-joke">
+
+        ⚖️ The banana has no legal representation.
+
+    </div>
+
+</section>
+    <script src="script.js"></script>
+<!-- ========================================
+     LEVEL 05 — BANANA CRISIS
+======================================== -->
+
+<section class="banana-crisis" id="bananaCrisis">
+
+    <div class="crisis-heading">
+
+        <div class="step-number crisis-number">
+            5
+        </div>
+
+        <div>
+            <p class="section-label">
+                LEVEL 05 / 09
+            </p>
+
+            <h2>
+                🚨 Banana Crisis
+            </h2>
+
+            <p>
+                The mathematics has failed to satisfy everyone.
+                Emergency decisions are required.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="crisis-card">
+
+        <div class="crisis-alert">
+
+            <div class="alert-icon">
+                🚨
+            </div>
+
+            <div>
+
+                <span>
+                    BANANA EMERGENCY DETECTED
+                </span>
+
+                <h3 id="crisisTitle">
+                    Calculating the damage...
+                </h3>
+
+            </div>
+
+        </div>
+
+
+        <!-- Crisis statistics -->
+
+        <div class="crisis-stats">
+
+            <div class="crisis-stat">
+
+                <span>🍌 AVAILABLE PIECES</span>
+
+                <strong id="crisisPieces">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="crisis-stat">
+
+                <span>👥 PEOPLE</span>
+
+                <strong id="crisisPeople">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="crisis-stat">
+
+                <span>🚨 LEFT WITHOUT PIECE</span>
+
+                <strong id="peopleMissing">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- Emergency options -->
+
+        <div class="crisis-options-box">
+
+            <div class="crisis-option-title">
+                🧠 EMERGENCY PROTOCOL
+            </div>
+
+            <p>
+                Choose how the Banana Distribution Authority
+                should handle the crisis.
+            </p>
+
+
+            <div class="crisis-options">
+
+                <button
+                    class="crisis-option"
+                    onclick="handleCrisis('smaller')">
+
+                    <span>📏</span>
+
+                    <div>
+
+                        <strong>
+                            Make everyone's pieces smaller
+                        </strong>
+
+                        <small>
+                            Equality at the cost of piece size.
+                        </small>
+
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="crisis-option"
+                    onclick="handleCrisis('leftover')">
+
+                    <span>🍌</span>
+
+                    <div>
+
+                        <strong>
+                            Use every possible banana fragment
+                        </strong>
+
+                        <small>
+                            Waste is officially unacceptable.
+                        </small>
+
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="crisis-option"
+                    onclick="handleCrisis('accept')">
+
+                    <span>🤷</span>
+
+                    <div>
+
+                        <strong>
+                            Accept that some people get nothing
+                        </strong>
+
+                        <small>
+                            Mathematically efficient. Socially questionable.
+                        </small>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Crisis result -->
+
+        <div
+            class="crisis-result"
+            id="crisisResult">
+
+            <div class="crisis-result-icon">
+                🍌
+            </div>
+
+            <div>
+
+                <span>
+                    EMERGENCY DECISION
+                </span>
+
+                <strong id="crisisDecision">
+                    Awaiting protocol...
+                </strong>
+
+                <p id="crisisExplanation">
+                    Choose an emergency protocol above.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="crisis-continue"
+            id="ammaButton"
+            onclick="goToAmma()"
+            disabled>
+
+            👩 CONTINUE TO AMMA OVERRIDE
+            <span>→</span>
+
+        </button>
+
+    </div>
+
+
+    <div class="crisis-joke">
+
+        🚨 Two people have been mathematically abandoned.
+
+    </div>
+
+</section>
+<section class="amma-override" id="ammaOverride">
+
+    <div class="amma-entry">
+
+        <div class="level-badge">LEVEL 06 / 09</div>
+
+        <h2>Amma Override</h2>
+
+        <p class="amma-subtitle">
+            When logic fails, Amma arrives.
+        </p>
+
+        <!-- Amma character -->
+        <div class="amma-character">
+            <div class="amma-avatar">👩🏻</div>
+
+            <div class="amma-spark spark-one">✦</div>
+            <div class="amma-spark spark-two">✦</div>
+            <div class="amma-spark spark-three">✧</div>
+        </div>
+
+        <!-- Dialogue -->
+        <div class="amma-dialogue">
+            <span class="dialogue-tail"></span>
+            <p id="ammaMessage">
+                "Ithentha ithra calculation okke?
+                Oru pazham alle!"
+            </p>
+            <small>— Amma ❤️</small>
+        </div>
+
+        <div class="amma-system-alert">
+            👩 AMMA HAS ENTERED THE SYSTEM
+        </div>
+
+    </div>
+
+
+    <!-- Amma choices -->
+
+    <div class="amma-choice-card">
+
+        <h3>👩 Amma entha parayunne?</h3>
+
+        <p class="choice-subtitle">
+            Mathematical calculations temporarily suspended.
+        </p>
+
+        <div class="amma-options">
+
+            <button onclick="chooseAmma('math')">
+                🧮
+                <span>
+                    Math parayunnath kelkkaam
+                </span>
+                →
+            </button>
+
+            <button onclick="chooseAmma('amma')">
+                👩
+                <span>
+                    Amma theerumanikkatte
+                </span>
+                →
+            </button>
+
+            <button onclick="chooseAmma('chaos')">
+                🍌
+                <span>
+                    Amma parayunnath cheyyaam
+                </span>
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Amma result -->
+
+    <div class="amma-result" id="ammaResult">
+
+        <div class="amma-verdict-card">
+
+            <div class="crown">👑</div>
+
+            <h3 id="ammaVerdict">
+                AMMA WINS
+            </h3>
+
+            <p id="ammaExplanation"></p>
+
+        </div>
+
+        <button
+            class="leftover-continue"
+            id="leftoverButton"
+            onclick="goToLeftover()"
+            disabled>
+            Continue to Leftover Lab →
+            🍌
+        </button>
+
+    </div>
+
+</section>
+<!-- =================================
+     LEVEL 07 — LEFTOVER LAB
+================================= -->
+
+<section class="leftover-lab" id="leftoverLab">
+
+    <div class="level-badge">LEVEL 07 / 09</div>
+
+    <h2>🗑️ Leftover Lab</h2>
+
+    <p class="leftover-subtitle">
+        Congratulations. You successfully created a banana piece nobody asked for.
+    </p>
+
+    <div class="leftover-display">
+
+        <div class="leftover-banana">🍌</div>
+
+        <div class="leftover-number">
+            <span id="leftoverAmount">0</span> cm
+        </div>
+
+        <p>of mathematically suspicious banana remains.</p>
+
+    </div>
+
+    <div class="leftover-question">
+        <h3>🤔 What should we do with it?</h3>
+
+        <div class="leftover-options">
+
+            <button onclick="chooseLeftover('shake')">
+                🥤
+                <span>Make a banana shake</span>
+                →
+            </button>
+
+            <button onclick="chooseLeftover('save')">
+                🧊
+                <span>Save it for later</span>
+                →
+            </button>
+
+            <button onclick="chooseLeftover('amma')">
+                👩
+                <span>Ask Amma what to do</span>
+                →
+            </button>
+
+            <button onclick="chooseLeftover('throw')">
+                🗑️
+                <span>Throw it away</span>
+                →
+            </button>
+
+        </div>
+    </div>
+
+    <div class="leftover-result" id="leftoverResult">
+
+        <div class="leftover-verdict">
+            <div id="leftoverEmoji">🍌</div>
+
+            <h3 id="leftoverVerdict"></h3>
+
+            <p id="leftoverExplanation"></p>
+        </div>
+
+        <button
+            id="analysisButton"
+            onclick="goToAnalysis()">
+            Continue to Final Analysis →
+        </button>
+
+    </div>
+
+</section>
+<!-- =================================
+     LEVEL 08 — FINAL ANALYSIS
+================================= -->
+
+<section class="final-analysis" id="finalAnalysis">
+
+    <div class="level-badge">LEVEL 08 / 09</div>
+
+    <h2>📊 Final Analysis</h2>
+
+    <p class="analysis-subtitle">
+        After an unnecessarily complicated banana investigation...
+    </p>
+
+    <div class="analysis-status">
+        🍌 THE BANANA HAS BEEN MATHEMATICALLY UNDERSTOOD.
+    </div>
+
+    <div class="analysis-grid">
+
+        <div class="analysis-card">
+            <span>🍌</span>
+            <h3>Banana Length</h3>
+            <strong id="finalLength">0 cm</strong>
+        </div>
+
+        <div class="analysis-card">
+            <span>👥</span>
+            <h3>People</h3>
+            <strong id="finalPeople">0</strong>
+        </div>
+
+        <div class="analysis-card">
+            <span>✂️</span>
+            <h3>Pieces</h3>
+            <strong id="finalPieces">0</strong>
+        </div>
+
+        <div class="analysis-card">
+            <span>📏</span>
+            <h3>Piece Size</h3>
+            <strong id="finalPieceSize">0 cm</strong>
+        </div>
+
+        <div class="analysis-card">
+            <span>⚖️</span>
+            <h3>Justice Choice</h3>
+            <strong id="finalJustice">—</strong>
+        </div>
+
+        <div class="analysis-card">
+            <span>👩</span>
+            <h3>Amma Decision</h3>
+            <strong id="finalAmma">—</strong>
+        </div>
+
+        <div class="analysis-card">
+            <span>🗑️</span>
+            <h3>Leftover</h3>
+            <strong id="finalLeftover">0 cm</strong>
+        </div>
+
+        <div class="analysis-card">
+            <span>🏆</span>
+            <h3>Overall Score</h3>
+            <strong id="finalScore">0 / 100</strong>
+        </div>
+
+    </div>
+
+    <div class="analysis-summary">
+
+        <h3>🧠 System Conclusion</h3>
+
+        <p id="finalConclusion">
+            Calculating the consequences of cutting one banana...
+        </p>
+
+    </div>
+
+    <button
+        class="analysis-continue"
+        onclick="goToVerdict()">
+        Continue to Final Verdict →
+        🏆
+    </button>
+
+</section>
+<!-- =================================
+     LEVEL 09 — FINAL VERDICT
+================================= -->
+
+<section class="final-verdict" id="finalVerdict">
+
+    <div class="level-badge">LEVEL 09 / 09</div>
+
+    <div class="trophy">🏆</div>
+
+    <h2>Final Banana Verdict</h2>
+
+    <p class="verdict-subtitle">
+        The unnecessarily advanced banana investigation is complete.
+    </p>
+
+    <div class="certificate">
+
+        <div class="certificate-top">
+            🍌 PAZHAMCUT™ 🍌
+        </div>
+
+        <h3 id="verdictTitle">
+            BANANA MASTER
+        </h3>
+
+        <p id="verdictMessage">
+            Congratulations. You survived the banana.
+        </p>
+
+        <div class="final-score-box">
+
+            <span>FINAL SCORE</span>
+
+            <strong id="verdictScore">
+                0 / 100
+            </strong>
+
+        </div>
+
+        <div class="verdict-stats">
+
+            <div>
+                <span>⚖️</span>
+                <small>Justice</small>
+                <strong id="verdictJustice">0</strong>
+            </div>
+
+            <div>
+                <span>🚨</span>
+                <small>Crisis</small>
+                <strong id="verdictCrisis">0</strong>
+            </div>
+
+            <div>
+                <span>👩</span>
+                <small>Amma</small>
+                <strong id="verdictAmma">0</strong>
+            </div>
+
+            <div>
+                <span>🗑️</span>
+                <small>Leftover</small>
+                <strong id="verdictLeftover">0</strong>
+            </div>
+
+        </div>
+
+        <div class="certificate-footer">
+            <span>Certificate No. 🍌-001</span>
+            <span>Officially Overengineered</span>
+        </div>
+
+    </div>
+
+    <p class="final-joke">
+        Thank you for using an unnecessarily advanced system.
+    </p>
+
+    <button
+        class="restart-button"
+        onclick="restartGame()">
+        🔄 Cut Another Banana
+    </button>
+
+</section>
+</body>
+
+</html>
